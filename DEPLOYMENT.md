@@ -95,16 +95,22 @@ This guide provides step-by-step instructions for deploying the HireMind applica
 
 1. Choose a backend hosting platform (Render recommended)
 2. Deploy your backend and note the URL (e.g., `https://your-backend.onrender.com`)
+3. Set environment variables in your backend hosting platform:
+   - `OPENROUTER_API_KEY`: Your OpenRouter API key
+   - `NODE_ENV`: `production`
+   - `PORT`: `5000`
+   - `FRONTEND_URL`: `https://hiremindcom.vercel.app` (your frontend URL)
 
 ### Step 2: Deploy Frontend
 
-1. Update your frontend environment variables:
-   - Set `VITE_API_URL` to your backend URL
+1. Update your frontend environment variables in Vercel dashboard:
+   - Set `VITE_API_URL` to your **deployed backend URL** (NOT localhost)
+   - Set `VITE_OPENROUTER_API_KEY` to your OpenRouter API key
 2. Deploy to Vercel or Netlify
 
 ### Step 3: Update CORS Settings
 
-Make sure your backend allows requests from your frontend domain by updating the CORS configuration in `backend/server.js`.
+The backend is already configured to accept requests from `https://hiremindcom.vercel.app`. Make sure your backend CORS configuration includes your frontend domain.
 
 ## Environment Variables Reference
 
