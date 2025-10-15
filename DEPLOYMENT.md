@@ -17,8 +17,10 @@ This guide provides step-by-step instructions for deploying the HireMind applica
    - Import your GitHub repository
    - Select the root directory (not backend)
 
-2. **Configure Environment Variables**:
-   - Add `VITE_API_URL` with your backend URL
+2. **Configure Environment Variables in Vercel Dashboard**:
+   - Go to your project settings in Vercel
+   - Navigate to "Environment Variables" section
+   - Add `VITE_API_URL` with your backend URL (e.g., `https://your-backend.onrender.com`)
    - Add `VITE_OPENROUTER_API_KEY` with your OpenRouter API key
 
 3. **Deploy**:
